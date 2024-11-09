@@ -1,0 +1,53 @@
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(157, 193, 254);
+    padding: 25px;
+}
+
+/* The thing you will need to do here is use a linear gradient as background and animate the background position.
+Use a linear gradient (50% orange, 50% transparent) as the background and tell the browser that background is 2 times larger than the element's or item's width i.e: (width:200%, height:100%)
+Then tell it to position the background left. */
+
+li {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, orange 50%, transparent 50%); /* linear gradient typically takes 2 or more colors, remeber the initial direction ure asking the browser to show from 'to right'. So it will be from Orange to transparent set at 50% apiece, but then we are telling the browser the size is 2x the element so it covers it*/
+    background-size: 200% 100%; /* width and height of the background */
+    background-position:right bottom; /* learn more about bg positioning */
+    transition: all 1s ease;
+}
+li:hover {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-position:left bottom; /* Reposition on hover */
+}
